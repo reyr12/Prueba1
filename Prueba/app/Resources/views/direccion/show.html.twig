@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Direccion</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ direccion.id }}</td>
+            </tr>
+            <tr>
+                <th>Calle</th>
+                <td>{{ direccion.calle }}</td>
+            </tr>
+            <tr>
+                <th>Numint</th>
+                <td>{{ direccion.numInt }}</td>
+            </tr>
+            <tr>
+                <th>Numext</th>
+                <td>{{ direccion.numExt }}</td>
+            </tr>
+            <tr>
+                <th>Colonia</th>
+                <td>{{ direccion.colonia }}</td>
+            </tr>
+            <tr>
+                <th>Municipio</th>
+                <td>{{ direccion.municipio }}</td>
+            </tr>
+            <tr>
+                <th>Estado</th>
+                <td>{{ direccion.estado }}</td>
+            </tr>
+            <tr>
+                <th>Codpost</th>
+                <td>{{ direccion.codPost }}</td>
+            </tr>
+            <tr>
+                <th>Pais</th>
+                <td>{{ direccion.pais }}</td>
+            </tr>
+            <tr>
+                <th>Personal</th>
+                <td>{{ direccion.personal }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('direccion_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('direccion_edit', { 'id': direccion.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

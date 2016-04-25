@@ -1,0 +1,38 @@
+Prueba\PruebaBundle\Entity\Direccion:
+    type: entity
+    table: null
+    repositoryClass: Prueba\PruebaBundle\Repository\DireccionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        calle:
+            type: string
+            length: '20'
+        numInt:
+            type: integer
+        numExt:
+            type: string
+            length: 255
+        colonia:
+            type: string
+            length: '20'
+        municipio:
+            type: string
+            length: '20'
+        estado:
+            type: string
+            length: '20'
+        codPost:
+            type: integer
+        pais:
+            type: string
+            length: '20'
+manyToOne:
+        personal:
+            targetEntity: Prueba\PruebaBundle\Entity\Personal
+            mappedBy: Direccion
+lifecycleCallbacks: { }

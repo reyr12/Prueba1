@@ -1,0 +1,30 @@
+Prueba\PruebaBundle\Entity\Personal:
+    type: entity
+    table: null
+    repositoryClass: Prueba\PruebaBundle\Repository\PersonalRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '20'
+        apePat:
+            type: string
+            length: '20'
+        apeMat:
+            type: string
+            length: '20'
+        edad:
+            type: integer
+oneToMany:
+    direccion:
+            targetEntity: Prueba\PruebaBundle\Entity\Direccion
+            inversedBy: Personal
+            joinColumn:
+                name: direccion_id
+                referencedColumnName: id 
+lifecycleCallbacks: { }

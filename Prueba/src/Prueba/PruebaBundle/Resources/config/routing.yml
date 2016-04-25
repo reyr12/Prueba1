@@ -1,0 +1,12 @@
+prueba_direccion:
+        resource: "@PruebaBundle/Resources/config/routing/direccion.yml"
+        prefix:   /direccion
+
+
+prueba_personal:
+    resource: "@PruebaBundle/Resources/config/routing/personal.yml"
+    prefix:   /personal
+
+prueba_homepage:
+    path:     /
+    defaults: { _controller: PruebaBundle:Default:index }

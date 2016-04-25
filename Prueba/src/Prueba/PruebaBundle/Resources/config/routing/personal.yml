@@ -1,0 +1,24 @@
+personal_index:
+    path:     /
+    defaults: { _controller: "PruebaBundle:Personal:index" }
+    methods:  GET
+
+personal_show:
+    path:     /{id}/show
+    defaults: { _controller: "PruebaBundle:Personal:show" }
+    methods:  GET
+
+personal_new:
+    path:     /new
+    defaults: { _controller: "PruebaBundle:Personal:new" }
+    methods:  [GET, POST]
+
+personal_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PruebaBundle:Personal:edit" }
+    methods:  [GET, POST]
+
+personal_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PruebaBundle:Personal:delete" }
+    methods:  DELETE
